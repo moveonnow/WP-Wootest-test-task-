@@ -6,6 +6,9 @@ class Wootest {
 	public $user;
 	public $options = array();
 
+	/*
+		[taghook tagfilter tagconstruct tagtemplates tagchange tagswitch tagredirect tagcart tagempty tagcreate tagpage tagpost tagdynamically]
+	*/
 
 	public function __construct($options, $user_fields, $woo_fields) {
 
@@ -21,8 +24,10 @@ class Wootest {
 
 
 
+	/* [ tagpage tagpost tagreate tagdynamically taggenerate tagcheck tagexist]
+
     /**
-	   * Redirect to films.
+	   * Dynamically creates post / page and checks if post / page exists
 	*/
 	public function create_redirect_page() {
 	  	
@@ -63,6 +68,8 @@ class Wootest {
 
 
     /**
+    	[ tagcart tagempty tagdelete tagwoo taglimit tagitems tagitem tagproducts ]
+
 	   * Limit items in cart per 1.
 	*/
 	public function woo_custom_add_to_cart( $cart_item_data ) {
@@ -72,6 +79,11 @@ class Wootest {
 	    return $cart_item_data;
 	}
 
+
+	/*
+	[ tagpage tagpost tagtemplate tagchange tagswitch tagdynamically]
+
+	*/
 
 	public function switch_template( $page_template ) {
         
